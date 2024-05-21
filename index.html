@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="welcome.css">
+    <link rel="icon" href="favicon.ico.png" type="image/x-icon">
+    <title>Tic Tac Toe Master</title>
+</head>
+<body>
+    
+    <div class="main-container">
+        <div class="container1">
+            <img src="tic-tac-toe.png" alt="" class="src">
+        </div>
+        <div class="container2">
+            <div class="text-content">
+            <h1>Tic Tac Toe Master</h1>
+            <p>Play and Master</p>
+             <p>Tic Tac Toe</p>
+        </div>
+        <div class="button">
+            <button id="start-game">Start</button>
+        </div>
+        </div>
+    </div>
+    <script>
+        let startGame = document.getElementById("start-game");
+        startGame.addEventListener('click',function(){
+            window.location.href = 'tic-tac-toe.html';
+        });
+    </script>
+</body>
+</html>

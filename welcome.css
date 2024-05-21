@@ -1,0 +1,115 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    font-family: "Press Start 2P", system-ui;
+    position: relative;
+}
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid transparent;
+    background: linear-gradient(to right, rgb(97, 97, 255), rgb(155, 1, 155)) border-box;
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) padding-box, 
+        linear-gradient(#fff 0 0);
+    mask: 
+        linear-gradient(#fff 0 0) padding-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor; 
+            mask-composite: exclude; 
+    pointer-events: none;
+}
+.main-container{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.container1{
+    margin: 30px;
+    margin-right: 60px;
+}
+.container1 img{
+    height: 27rem;
+    width: 30rem;
+}
+.container2{
+    margin: 30px;
+}
+.text-content{
+    text-align: center;
+}
+.text-content h1{
+    color: white;
+    font-size: 2.5rem;
+    border-bottom: 5px solid transparent;
+    padding-bottom: 25px;
+    font-weight: 600;
+    border-image: linear-gradient(to right,rgb(97, 97, 255),rgb(155, 1, 155));
+    border-image-slice: 1;
+    margin-bottom: 3.5rem;
+}
+.text-content p{
+    color: white;
+    font-size: 1.7rem;
+    margin: 0;
+    padding: 0.7rem;
+}
+.button{
+    text-align: center;
+    margin-top: 40px;
+}
+.button button{
+    height: 3rem;
+    width: 10rem;
+    background: linear-gradient(to right,rgb(97, 97, 255),rgb(155, 1, 155));
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Press Start 2P",system-ui
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 767px) {
+    .main-container{
+        flex-direction: column;
+    }
+    .container1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-right: 0;
+        margin: 0;
+    }
+    .container1 img{
+        height: 8rem;
+        width: 8rem;
+        margin-top: 10px;
+    }
+    .text-content h1{
+        font-size: 1.5rem;
+        border-bottom: 2px solid transparent;
+        padding-bottom: 20px;
+        font-weight: 600;
+        margin-bottom: 2.5rem;
+        line-height: 2.1rem;
+    }
+    .text-content p{
+        font-size: 1.0rem;
+    }
+  }
